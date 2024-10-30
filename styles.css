@@ -1,0 +1,256 @@
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      width: 100vw;
+      overflow-x: hidden;
+      background: linear-gradient(0deg, rgb(0, 37, 126), rgb(0, 0, 54));
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      60% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes leftSwipe {
+      0% {
+        transform: translateX(-50vw);
+      }
+
+      75% {
+        transform: translateX(-50vw);
+      }
+
+      100% {
+        transform: translateX(0vw);
+      }
+    }
+
+    .title {
+      color: #5C6AC4;
+    }
+
+    * {
+      text-align: center;
+      font-family: "PT Sans Narrow", sans-serif;
+      font-style: normal;
+      color: #ffffff;
+      /*border: 1px solid red; */
+    }
+
+    #GreetHo {
+        width: 20vw;
+    }
+
+    .desc {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .background-desc {
+      width: 25vw;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .family {
+        width: 20vw;
+    }
+
+    .img-container {
+        gap: 5vw;
+        justify-content: center;
+        display: flex;
+    }
+
+    .fadeIn {
+      animation: fadeIn 1s linear forwards;
+      animation-timeline: view();
+      animation-range: entry 0;
+      opacity: 0;
+    }
+
+    .skills {
+        gap: 0;
+        margin: 0;
+        width: 50vw;
+        display: flex;
+        transform: translateX(-50vw);
+        animation: leftSwipe 1s linear forwards;
+        animation-timeline: scroll(block nearest);
+        background-color: rgb(2, 1, 59);
+        padding: 5px;
+        height: fit-content;
+        border-bottom: 2.5vw solid rgb(2, 1, 59);
+    }
+    
+    .persona-title {
+      margin-top: 10vh;
+      width: 100vw;
+      height: 20vh;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      transform: skewX(0);
+      animation: unSkew 1s linear forwards;
+      animation-timeline: scroll(block nearest);
+      border-top: 5px solid red;
+      border-bottom: 15px solid blue;
+      
+    }
+
+    .persona-name {
+      margin: 0;
+      text-align: left;
+      color: black;
+    }
+
+    @keyframes rightSwipe {
+      0% {
+        transform: translateX(70vw) scaleY(0);
+        filter: opacity(0);
+      }
+
+      50% {
+        transform: translateX(70vw) scaleY(0);
+        filter: opacity(0);
+      }
+
+      80% {
+        transform: translateX(0vw) scaleY(0.7);
+        filter: opacity(1);
+      }
+
+      100% {
+        transform: translateX(0vw) scaleY(1);
+      }
+    }
+
+    @keyframes unSkew {
+      0% {
+        transform: skewX(0deg);
+      }
+
+      60% {
+        transform: rotateZ(0deg);
+      }
+
+      100% {
+        transform: skewY(50deg);
+        transform: rotateZ(-5deg);
+      }
+    }
+
+    .arcana {
+      align-self: normal;
+      margin-left: 10vw;
+      transform: translateX(70vw);
+      animation: rightSwipe 1s linear forwards;
+      animation-timeline: scroll(block nearest);
+      animation-range: entry 0;
+    }
+    
+    .arcana-title {
+      opacity: 0.25;
+    }
+
+    .arcana-name {
+      z-index: 0;
+      opacity: 0.25;
+      font-size: 54px;
+    }
+
+    .demon-name {
+      font-size: 32px;
+      position: absolute;
+      margin-left: 22.5vw;
+      z-index: 2;
+      animation: rightSwipe 1s linear forwards;
+      animation-timeline: scroll(block nearest);
+    }
+
+    .spacer-30 {
+      height: 30vh;
+    }
+
+    .spacer-10 {
+      height: 10vh;
+    }
+
+    .gray {
+        background-color: rgb(44, 47, 102);
+    }
+
+    .half {
+        width: 25vw;
+    }
+
+    .skill-name {
+        text-align: left;
+        transform: skewX(-5deg);
+        font-size: 24px;
+        color: white;
+        display: flex;
+        margin: 0;
+    }
+
+    .skill_icon {
+      width: 20%;
+    }
+
+    .empty {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .display-persona {
+      width: 100vw;
+      height: 15vw;
+      display: flex;
+      align-items: center;
+    }
+
+    .heehoyay-container {
+      width: 50vw;
+    }
+
+    @keyframes flipIn {
+      0% {
+        transform: rotateY(180deg);
+      }
+
+      50% {
+        transform: rotateY(180deg);
+      }
+
+      100% {
+        transform: rotateZ(0deg);
+      }
+    }
+
+    .heehoyay {
+      animation: flipIn 1s linear forwards;
+      animation-timeline: scroll(block nearest);
+      width: 25vw;
+    }
+    
+    .light-blue {
+      color: rgb(110, 154, 255);
+    }
