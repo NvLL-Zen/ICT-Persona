@@ -1,6 +1,7 @@
 
     html {
       scroll-behavior: smooth;
+      font-size: 16px;
     }
 
     body {
@@ -96,6 +97,7 @@
         animation-timeline: scroll(block nearest);
         background-color: rgb(2, 1, 59);
         padding: 5px;
+        margin-left: 15px;
         height: fit-content;
         border-bottom: 2.5vw solid rgb(2, 1, 59);
     }
@@ -152,18 +154,36 @@
       }
 
       100% {
-        transform: skewY(50deg);
-        transform: rotateZ(-5deg);
+        transform: skewX(-10deg) rotateZ(-10deg);
       }
+    }
+
+    @keyframes unBlur {
+      0% {
+        filter: blur(10px);
+      }
+
+      25% {
+        filter: blur(10px);
+      }
+
+      100% {
+        filter: blur(0px);
+      }
+    }
+
+    .unBlur {
+      animation: unBlur 1s linear forwards;
+      animation-timeline: view();
+      animation-range: entry 0;
     }
 
     .arcana {
       align-self: normal;
-      margin-left: 10vw;
+      margin-left: 10%;
       transform: translateX(70vw);
       animation: rightSwipe 1s linear forwards;
-      animation-timeline: scroll(block nearest);
-      animation-range: entry 0;
+      animation-timeline: view();
     }
     
     .arcana-title {
@@ -173,13 +193,14 @@
     .arcana-name {
       z-index: 0;
       opacity: 0.25;
-      font-size: 54px;
+      font-size: clamp(2rem, 6vw, 4.5rem);
     }
 
     .demon-name {
-      font-size: 32px;
+      font-size: clamp(1rem, 6vw, 2rem);
       position: absolute;
-      margin-left: 22.5vw;
+      margin-left: 20%;
+      margin-top: 15vh;
       z-index: 2;
       animation: rightSwipe 1s linear forwards;
       animation-timeline: scroll(block nearest);
@@ -253,4 +274,29 @@
     
     .light-blue {
       color: rgb(110, 154, 255);
+    }
+
+    .bold-black {
+      color: black;
+      font-weight: 900;
+      opacity: 1;
+      font-size: 28px;
+      margin-left: 12.5vw;
+    }
+
+    .links {
+      width: 98.5vw;
+      display: flex;
+      flex-direction: row-reverse; 
+      gap: 25px;
+    }
+
+    .spacer-15 {
+      height: 15vh;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 24px;
     }
