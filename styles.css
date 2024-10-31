@@ -49,7 +49,6 @@
       font-family: "PT Sans Narrow", sans-serif;
       font-style: normal;
       color: #ffffff;
-      /*border: 1px solid red; */
     }
 
     #GreetHo {
@@ -108,7 +107,7 @@
       height: 20vh;
       background-color: white;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       transform: skewX(0);
       animation: unSkew 1s linear forwards;
       animation-timeline: scroll(block nearest);
@@ -160,11 +159,11 @@
 
     @keyframes unBlur {
       0% {
-        filter: blur(10px);
+        filter: blur(50px);
       }
 
       25% {
-        filter: blur(10px);
+        filter: blur(50px);
       }
 
       100% {
@@ -179,7 +178,7 @@
     }
 
     .arcana {
-      align-self: normal;
+      align-self: flex-start;
       margin-left: 10%;
       transform: translateX(70vw);
       animation: rightSwipe 1s linear forwards;
@@ -187,13 +186,14 @@
     }
     
     .arcana-title {
-      opacity: 0.25;
+      opacity: 0.15;
+      font-size: clamp(1rem, 6vw, 1.5rem);
     }
 
     .arcana-name {
       z-index: 0;
-      opacity: 0.25;
-      font-size: clamp(2rem, 6vw, 4.5rem);
+      opacity: 0.155;
+      font-size: clamp(2rem, 6vw, 4rem);
     }
 
     .demon-name {
