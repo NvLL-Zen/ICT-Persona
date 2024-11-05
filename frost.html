@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Thank You Ho!</title>
+    <!-- <link rel="stylesheet" href="./styles.css" /> -->
+  </head>
+  <body>
+    <style>
+      * {
+        text-align: left;
+        font-family: "PT Sans Narrow", sans-serif;
+      }
+
+      body {
+      padding: 0;
+      margin: 0;
+      width: 100vw;
+      overflow-x: hidden;
+      background: linear-gradient(0deg, rgb(0, 37, 126), rgb(0, 0, 54));
+    }
+
+      h1 {
+        font-size: 53.5vh;
+        font-family: "Ubuntu";
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: cyan;
+      }
+
+      a:hover {
+        cursor:text;
+      }
+
+      .page_section {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .horizontal_banner {
+      width: 0vw;
+      height: 25vh;
+      top: 50vh;
+      background: linear-gradient(-90deg, #2f3da6, #0a82a5);
+      animation: horizontal_banner 0.45s forwards linear;
+      animation-delay: 0.25s;
+    }
+
+    .vertical_banner {
+      width: 18.5vw;
+      height: 0vh;
+      left: 15vw;
+      background: linear-gradient(180deg, #2f3da6, #0a82a5);
+      animation: vertical_banner 0.45s forwards linear;
+      animation-delay: 0.25s;
+    }
+
+    .tarot_card {
+      z-index: 10;
+      top: 75vh;
+      width: 20vw;
+      left: 14vw;
+      animation: tarot_card 0.25s linear forwards;
+    }
+
+    @keyframes tarot_card {
+        0% {
+            top: 75vh;
+            box-shadow: 0px 0px black;
+            transition: rotateZ(0deg) rotateY(0deg);
+        }
+
+        100% {
+            top: 27.5vh;
+            box-shadow: -30px 20px black;
+            transform: rotateZ(-10deg) rotateY(20deg) rotateX(20deg);
+        }
+    }
+
+    .textbox {
+      text-align: left;
+      align-items: left;
+      transform: translateX(-50vw) skewX(-10deg);
+      opacity: 0;
+      color: white;
+      animation: 0.25s textbox linear forwards;
+      animation-delay: 0.25s;
+    }
+
+    @keyframes textbox {
+        0% {
+            transform: translateX(-50vw) skewX(-10deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0) skewX(0);
+            opacity: 1;
+        }
+    }
+
+    .supertext {
+      width: 100vw;
+      height: 50vh;
+      top: 25vh;
+    }
+
+    .maintext {
+      margin-left: 35vw;
+      display: flex;
+      flex-direction: row;
+      top: 35vh;
+      left: 37.5vw;
+    }
+
+    .arcana_textbox {
+      padding-top: 17.5vh;
+      margin-left: 4vh;
+    }
+
+    .arcana_text {
+      margin: 0;
+    }
+
+    .rank {
+      font-size: 6vh;
+    }
+
+    .magician {
+      font-size: 10vh;
+    }
+
+    .ok_button {
+        transform: scale(0);
+        top: 28.5vh;
+        left: 77.5vw;
+        font-size: 12vh;
+        word-spacing: 1vw;
+        animation: 0.45s ok_button linear forwards;
+        animation-delay: 0.25s;
+    }
+
+    @keyframes ok_button {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .ok_button:hover {
+        cursor: pointer;
+    }
+
+    .x {
+        margin-right: 10vw;
+    }
+
+    .white {
+        color: white;
+    }
+
+    .jack_family {
+      margin-top: 5.5vh;
+      padding: 1.67vh;
+      font-size: 5vh;
+      padding-right: 45vh;
+      animation: 0.25s jack_family linear forwards;
+      background: linear-gradient(90deg, black, rgba(255, 255, 255, 0));
+      background-size: 0%;
+      animation-delay: 0.45s;
+    }
+
+    @keyframes jack_family {
+        0% {
+            background-size: 0%;
+        }
+
+        100% {
+            background-size: 100%;
+        }
+    }
+
+    @keyframes horizontal_banner {
+        0% {
+            width: 0vw;
+        }
+
+        100% {
+            width: 100vw;
+        }
+    }
+
+    @keyframes vertical_banner {
+        0% {
+            height: 0vh;
+        }
+
+        100% {
+            height: 100vh;
+        }
+    }
+    </style>
+    <div class="page_section">
+      <div class="absolute vertical_banner"></div>
+      <div class="absolute horizontal_banner"></div>
+      <div class="supertext absolute">
+        <div class="maintext textbox">
+          <h1>1</h1>
+          <div class="textbox arcana_textbox">
+            <h3 class="arcana_text rank">RANK</h3>
+            <h4 class="arcana_text magician">Magician</h4>
+            <h4 class="arcana_text jack_family"><a href="">J</a>ack Family</h4>
+          </div>
+          
+        </div>
+        <a class="ok_button" href="./index.html">
+        <h4 class="absolute x_button ok_button">Ⓧ<a class="white ok_button" href="./index.html">OK</a></h4>
+        </a>
+      </div>
+      <img
+        class="absolute tarot_card"
+        src="./demons_icon/tarot_card.jpg"
+        alt="family"
+      />
+    </div>
+  </body>
+</html>
